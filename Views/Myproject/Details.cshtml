@@ -1,0 +1,50 @@
+﻿@model Myproject.Models.list_table
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>List Details</h2>
+
+<div>
+    <h4>To-do list</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }, new { @class = "btn btn-primary" }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
